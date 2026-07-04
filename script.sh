@@ -66,7 +66,7 @@ defaults write com.apple.widgets widgetAppearance -int 1
 # Secondary Click on bottom-right corner
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
 defaults write com.apple.AppleMultitouchTrackpad TrackpadCornerSecondaryClick -int 2
-defaults write -g com.apple.trackpad.trackpadCornerClickBehavior -int 
+defaults write -g com.apple.trackpad.trackpadCornerClickBehavior -int 1 
 
 # Lock on Lid Down
 pmset displaysleepnow
