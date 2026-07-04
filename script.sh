@@ -72,9 +72,9 @@ defaults write -g com.apple.trackpad.trackpadCornerClickBehavior -int 1
 pmset displaysleepnow
 
 # Restart Things
-killall cfprefsd
-killall Finder
-killall Dock
-killall NotificationCenter
+# killall cfprefsd
+# killall Finder
+# killall Dock
+# killall NotificationCenter
 
 sudo shutdown -r now
