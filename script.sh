@@ -1,6 +1,9 @@
 # Install Homebrew
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+# Inject brew into PATH
+/opt/homebrew/bin/brew shellenv
+
 # Install Apps
 brew install --cask \
   google-chrome \
