@@ -2,5 +2,5 @@
 
 ```
 URL=https://raw.githubusercontent.com/thekarananand/mac_starter_kit/refs/heads/main/script.sh
-curl -fsSL $URL | sudo bash
+bash < curl -fsSL $URL 
 ```
