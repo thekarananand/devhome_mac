@@ -76,3 +76,6 @@ killall cfprefsd
 killall Finder
 killall Dock
 killall NotificationCenter
+
+sudo pkill -9 -f MultitouchHID 2>/dev/null
+sudo pkill -9 -f hidd 2>/dev/null
