@@ -1,5 +1,9 @@
 # Install Homebrew
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+if ! command -v brew &> /dev/null; then
+  bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+else
+  echo "✅ Homebrew already installed."
+fi
 
 # Inject brew into PATH
 /opt/homebrew/bin/brew shellenv
