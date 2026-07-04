@@ -1,0 +1,71 @@
+# Install Homebrew
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Install Apps
+brew install --cask \
+  google-chrome \
+  zed \
+  claude-code \
+  ghostty \
+  mongodb-compass \
+  obsidian \
+  onlyoffice 
+
+# Install CLI Tools for customization
+brew install \
+  duti \
+  dockutil
+
+# Change Defaults on mac
+duti -s com.mitchellh.ghostty ssh
+duti -s com.google.chrome http
+duti -s com.google.chrome https
+
+# Purge Dock
+dockutil --remove all --no-restart
+
+# Set Apps on Dock
+dockutil --add '/System/Applications/Launchpad.app' --position 1
+dockutil --add '/Applications/Google Chrome.app' --position 2
+dockutil --add '/Applications/Ghostty.app'  --position 3
+dockutil --add '/Applications/Zed.app'  --position 4
+dockutil --add '/System/Applications/Notes.app'  --position 5
+dockutil --add '/Applications/Obsidian.app'  --position 6
+
+# Resize Dock
+defaults write com.apple.dock tilesize -int 48 
+
+# Set DOCK on left of Screen
+defaults write com.apple.dock orientation -string "left"
+
+# Turn on "Snap to Grid" on Desktop
+defaults write com.apple.finder DesktopViewSettings -dict-add ArrangeBy -string "grid"
+
+# Adjust Desktop grid spacing
+defaults write com.apple.finder DesktopViewSettings -dict-add GridSpacing -int 54
+
+# Hide the Tags from Finder
+defaults write com.apple.finder ShowRecentTags -bool false
+
+# Don't Create .DS_Store on Network Devices
+defaults write com.apple.desktopservices  -bool true
+
+# Don't Create .DS_Store on USB Devices
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+
+# Set Widget Style to Always Monochrome
+defaults write com.apple.widgets widgetAppearance -int 1
+
+# Secondary Click on bottom-right corner
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
+defaults write com.apple.AppleMultitouchTrackpad TrackpadCornerSecondaryClick -int 2
+defaults write -g com.apple.trackpad.trackpadCornerClickBehavior -int 
+
+# Lock on Lid Down
+pmset displaysleepnow
+
+# Restart Things
+killall cfprefsd
+killall Finder
+killall Dock
+killall NotificationCenter
