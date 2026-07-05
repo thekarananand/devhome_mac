@@ -74,6 +74,13 @@ defaults write -g com.apple.trackpad.trackpadCornerClickBehavior -int 1
 # Lock on Lid Down
 pmset displaysleepnow
 
+# Remove Junk
+rm -rf /Applications/GarageBand.app
+rm -rf /Applications/Keynote.app
+rm -rf /Applications/Numbers.app
+rm -rf /Applications/iMovie.app
+rm -rf /Applications/Pages.app
+
 # Restart Things
 # killall cfprefsd
 # killall Finder
