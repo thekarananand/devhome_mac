@@ -6,7 +6,7 @@ else
 fi
 
 # Inject brew into PATH
-echo "\n#Homebrew"
+echo "\n#Homebrew" > ~/.zshrc
 /opt/homebrew/bin/brew shellenv > ~/.zshrc
 source ~/.zshrc
 
