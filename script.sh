@@ -63,7 +63,7 @@ defaults write com.apple.desktopservices  -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 # Set Widget Style to Always Monochrome
-defaults write com.apple.widgets widgetAppearance -int 1
+defaults write com.apple.widgets widgetAppearance -int 0
 
 # Secondary Click on bottom-right corner
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
