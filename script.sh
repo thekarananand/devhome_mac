@@ -34,7 +34,8 @@ duti -s com.google.chrome https
 dockutil --remove all --no-restart
 
 # Set Apps on Dock
-dockutil --add '/System/Applications/Launchpad.app' --position 1
+dockutil --add '/System/Applications/Apps.app' --position 1
+# dockutil --add '/System/Applications/Launchpad.app' --position 1
 dockutil --add '/Applications/Google Chrome.app' --position 2
 dockutil --add '/Applications/Ghostty.app'  --position 3
 dockutil --add '/Applications/Zed.app'  --position 4
