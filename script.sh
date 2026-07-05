@@ -71,6 +71,9 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCorner
 defaults write com.apple.AppleMultitouchTrackpad TrackpadCornerSecondaryClick -int 2
 defaults write -g com.apple.trackpad.trackpadCornerClickBehavior -int 1 
 
+# Turn off the suggested and recent apps on dock
+defaults write com.apple.dock show-recents -bool false
+
 # Lock on Lid Down
 pmset displaysleepnow
 
@@ -83,4 +86,6 @@ bash -c "sudo rm -rf /Applications/{GarageBand,Keynote,Numbers,iMovie,Pages}.app
 # killall Dock
 # killall NotificationCenter
 
+#
+echo "Restarting..."
 sudo shutdown -r now
