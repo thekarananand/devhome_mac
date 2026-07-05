@@ -75,8 +75,7 @@ defaults write -g com.apple.trackpad.trackpadCornerClickBehavior -int 1
 pmset displaysleepnow
 
 # Remove Junk
-sudo rm -rf /Applications/{GarageBand,Keynote,Numbers,iMovie,Pages}.app
-
+bash -c "sudo rm -rf /Applications/{GarageBand,Keynote,Numbers,iMovie,Pages}.app"
 
 # Restart Things
 # killall cfprefsd
