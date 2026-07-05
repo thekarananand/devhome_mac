@@ -6,7 +6,9 @@ else
 fi
 
 # Inject brew into PATH
-/opt/homebrew/bin/brew shellenv
+echo "\n#Homebrew"
+/opt/homebrew/bin/brew shellenv > ~/.zshrc
+source ~/.zshrc
 
 # Install Apps
 brew install --cask \
