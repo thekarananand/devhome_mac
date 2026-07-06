@@ -75,7 +75,7 @@ defaults write -g com.apple.trackpad.trackpadCornerClickBehavior -int 1
 defaults write com.apple.dock show-recents -bool false
 
 # Lock on Lid Down
-pmset displaysleepnow
+sudo sysadminctl -screenLock immediate -password -
 
 # Remove Junk
 bash -c "sudo rm -rf /Applications/{GarageBand,Keynote,Numbers,iMovie,Pages}.app"
